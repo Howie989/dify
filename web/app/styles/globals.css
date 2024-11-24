@@ -4,6 +4,8 @@
 
 @import '../../themes/light.css';
 @import '../../themes/dark.css';
+@import "../../themes/manual-light.css";
+@import "../../themes/manual-dark.css";
 
 html[data-changing-theme] * {
   transition: none !important;
@@ -139,6 +141,12 @@ button:focus-within {
   font-size: 10px;
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 12px;
+}
+
+.system-2xs-regular {
+  font-size: 10px;
+  font-weight: 400;
   line-height: 12px;
 }
 
