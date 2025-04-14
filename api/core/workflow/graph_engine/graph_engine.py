@@ -641,6 +641,8 @@ class GraphEngine:
             try:
                 # run node
                 retry_start_at = datetime.now(UTC).replace(tzinfo=None)
+                # yield control to other threads
+                time.sleep(0.001)
                 generator = node_instance.run()
                 for item in generator:
                     if isinstance(item, GraphEngineEvent):
@@ -738,8 +740,10 @@ class GraphEngine:
                                     )
                                 should_continue_retry = False
                             elif run_result.status == WorkflowNodeExecutionStatus.SUCCEEDED:
-                                if node_instance.should_continue_on_error and self.graph.edge_mapping.get(
-                                    node_instance.node_id
+                                if (
+                                    node_instance.should_continue_on_error
+                                    and self.graph.edge_mapping.get(node_instance.node_id)
+                                    and node_instance.node_data.error_strategy is ErrorStrategy.FAIL_BRANCH
                                 ):
                                     run_result.edge_source_handle = FailBranchSourceHandle.SUCCESS
                                 if run_result.metadata and run_result.metadata.get(NodeRunMetadataKey.TOTAL_TOKENS):
