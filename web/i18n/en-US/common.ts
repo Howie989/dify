@@ -64,6 +64,8 @@ const translation = {
     skip: 'Skip',
     format: 'Format',
     more: 'More',
+    selectAll: 'Select All',
+    deSelectAll: 'Deselect All',
   },
   errorMsg: {
     fieldRequired: '{{field}} is required',
@@ -454,6 +456,7 @@ const translation = {
       connected: 'Connected',
       disconnected: 'Disconnected',
       changeAuthorizedPages: 'Change authorized pages',
+      integratedAlert: 'Notion is integrated via internal credential, no need to re-authorize.',
       pagesAuthorized: 'Pages authorized',
       sync: 'Sync',
       remove: 'Remove',
