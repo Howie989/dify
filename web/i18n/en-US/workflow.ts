@@ -74,6 +74,8 @@ const translation = {
     exportPNG: 'Export as PNG',
     exportJPEG: 'Export as JPEG',
     exportSVG: 'Export as SVG',
+    currentView: 'Current View',
+    currentWorkflow: 'Current Workflow',
     model: 'Model',
     workflowAsTool: 'Workflow as Tool',
     configureRequired: 'Configure Required',
@@ -113,6 +115,7 @@ const translation = {
     addFailureBranch: 'Add Fail Branch',
     loadMore: 'Load More',
     noHistory: 'No History',
+    tagBound: 'Number of apps using this tag',
   },
   env: {
     envPanelTitle: 'Environment Variables',
@@ -231,6 +234,8 @@ const translation = {
     'utilities': 'Utilities',
     'noResult': 'No match found',
     'agent': 'Agent Strategy',
+    'allAdded': 'All added',
+    'addAll': 'Add all',
   },
   blocks: {
     'start': 'Start',
@@ -284,6 +289,18 @@ const translation = {
     zoomTo50: 'Zoom to 50%',
     zoomTo100: 'Zoom to 100%',
     zoomToFit: 'Zoom to Fit',
+    alignNodes: 'Align Nodes',
+    alignLeft: 'Left',
+    alignCenter: 'Center',
+    alignRight: 'Right',
+    alignTop: 'Top',
+    alignMiddle: 'Middle',
+    alignBottom: 'Bottom',
+    vertical: 'Vertical',
+    horizontal: 'Horizontal',
+    distributeHorizontal: 'Space Horizontally',
+    distributeVertical: 'Space Vertically',
+    selectionAlignment: 'Selection Alignment',
   },
   variableReference: {
     noAvailableVars: 'No available variables',
@@ -367,6 +384,10 @@ const translation = {
         times: 'times',
         ms: 'ms',
         retries: '{{num}} Retries',
+      },
+      typeSwitch: {
+        input: 'Input value',
+        variable: 'Use variable',
       },
     },
     start: {
@@ -662,6 +683,9 @@ const translation = {
     tool: {
       authorize: 'Authorize',
       inputVars: 'Input Variables',
+      settings: 'Settings',
+      insertPlaceholder1: 'Type or press',
+      insertPlaceholder2: 'insert variable',
       outputVars: {
         text: 'tool generated content',
         files: {
@@ -870,6 +894,7 @@ const translation = {
       },
       outputVars: {
         text: 'agent generated content',
+        usage: 'Model Usage Information',
         files: {
           title: 'agent generated files',
           type: 'Support type. Now only support image',
@@ -889,6 +914,8 @@ const translation = {
         install: 'Install',
         cancel: 'Cancel',
       },
+      clickToViewParameterSchema: 'Click to view parameter schema',
+      parameterSchema: 'Parameter Schema',
     },
   },
   tracing: {
@@ -908,6 +935,7 @@ const translation = {
     defaultName: 'Untitled Version',
     nameThisVersion: 'Name this version',
     editVersionInfo: 'Edit version info',
+    copyId: 'Copy ID',
     editField: {
       title: 'Title',
       releaseNotes: 'Release Notes',
@@ -924,11 +952,18 @@ const translation = {
       deleteFailure: 'Failed to delete version',
       updateSuccess: 'Version updated',
       updateFailure: 'Failed to update version',
-    },
+      copyIdSuccess: 'ID copied to clipboard',
+      },
   },
   debug: {
     settingsTab: 'Settings',
     lastRunTab: 'Last Run',
+    relationsTab: 'Relations',
+    copyLastRun: 'Copy Last Run',
+    noLastRunFound: 'No previous run found',
+    noMatchingInputsFound: 'No matching inputs found from last run',
+    lastRunInputsCopied: '{{count}} input(s) copied from last run',
+    copyLastRunError: 'Failed to copy last run inputs',
     noData: {
       description: 'The results of the last run will be displayed here',
       runThisNode: 'Run this node',
@@ -953,6 +988,15 @@ const translation = {
       envNode: 'Environment',
       chatNode: 'Conversation',
       systemNode: 'System',
+    },
+    lastOutput: 'Last Output',
+    relations: {
+      dependencies: 'Dependencies',
+      dependents: 'Dependents',
+      dependenciesDescription: 'Nodes that this node relies on',
+      dependentsDescription: 'Nodes that rely on this node',
+      noDependencies: 'No dependencies',
+      noDependents: 'No dependents',
     },
   },
 }
